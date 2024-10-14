@@ -1,0 +1,18 @@
+// Colores //
+$primary_color: #000000;
+$secondary_color: #FFFFFF;
+$tertiary_color: #A405A7;
+
+// Fuentes //
+@font-face {
+    font-family: 'corporative';
+    src: url(../font/CorporativeSansAltRegular.otf);
+}
+
+@font-face {
+    font-family: 'corporative_bold';
+    src: url(../font/CorporativeSansAltBold.otf);
+}
+$principal_font: 'corporative';
+$secondary_font: 'corporative_bold';
+

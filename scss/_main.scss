@@ -1,0 +1,92 @@
+/* Principal */
+
+#principal {
+    background-image: url(../images/fondo.png);
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    .imagen_principal {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 65%;
+        }
+    }
+    .presentacion {
+        color: $secondary_color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 45%;
+        margin: 20px 0px;
+            h1 {
+                font-family: $secondary_font;
+                font-size: 3.5rem;
+                span {
+                    font-size: 2.1rem;
+                    font-family: $secondary_font;
+                }
+            }
+            h2 {
+                font-family: $secondary_font;
+                font-size: 1.75rem;
+                margin-top: 10px;
+                span {
+                    font-size: 1.75rem;
+                    font-family: $secondary_font;
+                    text-decoration: underline $tertiary_color;
+                }
+            }
+            p {
+                width: 80%;
+                margin-top: 10px;
+                font-size: 1.4rem;
+                text-align: justify;
+                span {
+                    font-family: $secondary_font;
+                }
+            }
+            div {
+                display: flex;
+                justify-content: start;
+                a {
+                    margin-right: 20px;
+                    color: $secondary_color;
+                    font-size: 1.3rem;
+                }
+            }
+        
+    }
+}
+
+/* Sobre las clases */
+
+#sobrelasclases {
+    @extend .secciones;
+    div {
+        div {
+            width: 100%;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            .video-container {
+                position: relative;
+                width: 70%; /* O establece el ancho deseado en píxeles o porcentaje */
+                padding-bottom: 40%; /* Relación de aspecto 16:9 (alto / ancho * 100)  56.25%*/
+                height: 0;
+                overflow: hidden;
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,55 @@
+header {
+    background-image: url(../images/fondo.png);
+    background-size: cover;
+    nav {
+        div {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 10px;
+            a {
+                width: 20%;
+                img {
+                    width: 50%;
+                    margin: 20px;
+                    @extend .hover;
+                }
+            }
+            .burguer{
+                background-color: transparent;
+                border: 0;
+                display: flex;
+                justify-content: end;
+                .color_icon {
+                    color: $secondary_color;
+                }
+            }
+            div {
+                ul {
+                    display: flex;
+                    justify-content:end;
+                    width: 100%;
+                    li {
+                        a {
+                            width: 100%;
+                            font-family: $secondary_font;
+                            font-size: 1.25rem !important;
+                            color: $secondary_color !important ;
+                            margin: 10px;
+                            @extend .hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.line_header {
+    color: $tertiary_color;
+    width: 100%;
+    border-width: 5px;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+}
