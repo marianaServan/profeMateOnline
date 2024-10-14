@@ -145,6 +145,28 @@
                     margin-bottom: 20px;
                 }
             }
+            .cards_sobrelasclases {
+                flex-direction: column; 
+                div {
+                    margin-bottom: 20px;
+                }
+            }
         }
     } 
+    #materias {
+        flex-direction: column;
+        div {
+            padding: 40px;
+            .custom-list {
+                li {
+                    &:not(:last-child)::after {
+                        height: 90px; /* Ajusta la longitud de la línea */
+                    }
+                }
+            }
+        }
+        .imagen_clases {
+            height: 300px;
+        }
+    }
 }

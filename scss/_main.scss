@@ -74,8 +74,8 @@
             position: relative;
             .video-container {
                 position: relative;
-                width: 70%; /* O establece el ancho deseado en píxeles o porcentaje */
-                padding-bottom: 40%; /* Relación de aspecto 16:9 (alto / ancho * 100)  56.25%*/
+                width: 70%; 
+                padding-bottom: 40%;
                 height: 0;
                 overflow: hidden;
                 iframe {
@@ -85,8 +85,102 @@
                     width: 100%;
                     height: 100%;
                 }
-            }
-            
+            }            
         }
+        .cards_sobrelasclases {
+            display: flex;
+            justify-content: space-between;
+            div {
+                padding: 40px;
+                background-image: url(../images/fondo.png);
+                background-size: 300%;
+                border-radius: 0px 20px 20px 20px ;
+                color: $secondary_color;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                .background-circles {
+                    position: absolute;
+                    top: -10px;
+                    left: 0px;
+                    width: 30%;
+                    z-index: 0; 
+                }
+                h4 {
+                    font-family: $secondary_font;
+                    font-size: 1.6rem;
+                    position: relative;
+                    z-index: 1;
+                }  
+                hr {
+                    color: $tertiary_color;
+                    border-width: 1px;
+                    opacity: 1;
+                }          
+                p {
+                    font-size: 1.4rem;
+                }
+                @extend .hover;
+            }
+        }
+    }
+}
+
+#materias {
+    display: flex;
+    width: 100%;
+    div {
+        padding: 70px;
+        background-image: url(../images/fondo.png);
+        background-size: cover;
+        h3 {
+            font-size: 2.5rem;
+            font-family: $secondary_font;
+            color: $secondary_color;
+        }
+        p {
+            font-size: 1.4rem;
+            color: $secondary_color;
+            margin-bottom: 30px; 
+        }
+        .custom-list {
+            list-style: none;
+            position: relative;
+            padding-left: 40px; 
+            li {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 30px; 
+                color: $secondary_color;
+                font-size: 1.4rem;
+                span {
+                    text-decoration: underline $tertiary_color;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -40px; /* Ajusta la posición del ícono respecto al texto */
+                    top: 0;
+                    width: 50px;
+                    height: 50px;
+                    background: url(../images/ic_circulos.png) no-repeat center center;
+                    background-size: 100%;
+                }
+                &:not(:last-child)::after {
+                    content: '';
+                    position: absolute;
+                    left: -20px;
+                    top: 30px; /* Ajusta la posición de la línea */
+                    width: 2px;
+                    height: 60px; /* Ajusta la longitud de la línea */
+                    background-color: $tertiary_color; /* Cambia el color de la línea */
+                }
+            }
+        }
+    }
+    .imagen_clases {
+        width: 100%;
+        background-image: url(../images/ilustracion_clase1.jpg);
+        background-size: cover;
     }
 }

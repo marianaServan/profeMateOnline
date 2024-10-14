@@ -15,7 +15,7 @@
 }
 
 /* Básicos */
-.hover:hover, header nav div div ul li a:hover, header nav div a img:hover, .botones:hover, .home div div a button:hover {
+.hover:hover, #sobrelasclases div .cards_sobrelasclases div:hover, header nav div div ul li a:hover, header nav div a img:hover, .botones:hover, .home div div a button:hover {
   filter: brightness(0.85);
   transform: scale(1.015);
 }
@@ -207,8 +207,8 @@ header nav div div ul li a {
 }
 #sobrelasclases div div .video-container {
   position: relative;
-  width: 70%; /* O establece el ancho deseado en píxeles o porcentaje */
-  padding-bottom: 40%; /* Relación de aspecto 16:9 (alto / ancho * 100)  56.25%*/
+  width: 70%;
+  padding-bottom: 40%;
   height: 0;
   overflow: hidden;
 }
@@ -218,6 +218,100 @@ header nav div div ul li a {
   left: 0;
   width: 100%;
   height: 100%;
+}
+#sobrelasclases div .cards_sobrelasclases {
+  display: flex;
+  justify-content: space-between;
+}
+#sobrelasclases div .cards_sobrelasclases div {
+  padding: 40px;
+  background-image: url(../images/fondo.png);
+  background-size: 300%;
+  border-radius: 0px 20px 20px 20px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#sobrelasclases div .cards_sobrelasclases div .background-circles {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 30%;
+  z-index: 0;
+}
+#sobrelasclases div .cards_sobrelasclases div h4 {
+  font-family: "corporative_bold";
+  font-size: 1.6rem;
+  position: relative;
+  z-index: 1;
+}
+#sobrelasclases div .cards_sobrelasclases div hr {
+  color: #A405A7;
+  border-width: 1px;
+  opacity: 1;
+}
+#sobrelasclases div .cards_sobrelasclases div p {
+  font-size: 1.4rem;
+}
+
+#materias {
+  display: flex;
+  width: 100%;
+}
+#materias div {
+  padding: 70px;
+  background-image: url(../images/fondo.png);
+  background-size: cover;
+}
+#materias div h3 {
+  font-size: 2.5rem;
+  font-family: "corporative_bold";
+  color: #FFFFFF;
+}
+#materias div p {
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+#materias div .custom-list {
+  list-style: none;
+  position: relative;
+  padding-left: 40px;
+}
+#materias div .custom-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+}
+#materias div .custom-list li span {
+  text-decoration: underline #A405A7;
+}
+#materias div .custom-list li::before {
+  content: "";
+  position: absolute;
+  left: -40px; /* Ajusta la posición del ícono respecto al texto */
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: url(../images/ic_circulos.png) no-repeat center center;
+  background-size: 100%;
+}
+#materias div .custom-list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 30px; /* Ajusta la posición de la línea */
+  width: 2px;
+  height: 60px; /* Ajusta la longitud de la línea */
+  background-color: #A405A7; /* Cambia el color de la línea */
+}
+#materias .imagen_clases {
+  width: 100%;
+  background-image: url(../images/ilustracion_clase1.jpg);
+  background-size: cover;
 }
 
 @media screen and (max-width: 991px) {
@@ -324,6 +418,24 @@ header nav div div ul li a {
     width: 100%;
     padding-bottom: 56.25%;
     margin-bottom: 20px;
+  }
+  #sobrelasclases div .cards_sobrelasclases {
+    flex-direction: column;
+  }
+  #sobrelasclases div .cards_sobrelasclases div {
+    margin-bottom: 20px;
+  }
+  #materias {
+    flex-direction: column;
+  }
+  #materias div {
+    padding: 40px;
+  }
+  #materias div .custom-list li:not(:last-child)::after {
+    height: 90px; /* Ajusta la longitud de la línea */
+  }
+  #materias .imagen_clases {
+    height: 300px;
   }
 }
 
