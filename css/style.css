@@ -15,7 +15,7 @@
 }
 
 /* Básicos */
-.hover:hover, #sobrelasclases div .cards_sobrelasclases div:hover, header nav div div ul li a:hover, header nav div a img:hover, .botones:hover, .home div div a button:hover {
+.hover:hover, #testimonios div .cards_testimonios div:hover, #sobrelasclases div .cards_sobrelasclases div:hover, header nav div div ul li a:hover, header nav div a img:hover, .botones:hover, .home div div a button:hover {
   filter: brightness(0.85);
   transform: scale(1.015);
 }
@@ -31,19 +31,19 @@
   text-decoration: none;
 }
 
-.secciones, #sobrelasclases {
+.secciones, #testimonios, #sobrelasclases {
   display: flex;
   justify-content: center;
 }
-.secciones div, #sobrelasclases div {
-  margin: 20px;
+.secciones div, #testimonios div, #sobrelasclases div {
+  /* margin: 20px; */
   width: 80%;
 }
-.secciones div h3, #sobrelasclases div h3 {
+.secciones div h3, #testimonios div h3, #sobrelasclases div h3 {
   font-size: 2.5rem;
   font-family: "corporative_bold";
 }
-.secciones div h3 span, #sobrelasclases div h3 span {
+.secciones div h3 span, #testimonios div h3 span, #sobrelasclases div h3 span {
   font-size: 1.5rem;
   font-family: "corporative_bold";
 }
@@ -200,7 +200,7 @@ header nav div div ul li a {
 /* Sobre las clases */
 #sobrelasclases div div {
   width: 100%;
-  margin: 20px;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
   position: relative;
@@ -222,6 +222,7 @@ header nav div div ul li a {
 #sobrelasclases div .cards_sobrelasclases {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 #sobrelasclases div .cards_sobrelasclases div {
   padding: 40px;
@@ -250,9 +251,14 @@ header nav div div ul li a {
   color: #A405A7;
   border-width: 1px;
   opacity: 1;
+  z-index: 1;
 }
 #sobrelasclases div .cards_sobrelasclases div p {
   font-size: 1.4rem;
+  z-index: 1;
+}
+#sobrelasclases div .cards_sobrelasclases div:nth-child(2) {
+  margin: 20px 10px;
 }
 
 #materias {
@@ -314,6 +320,78 @@ header nav div div ul li a {
   background-size: cover;
 }
 
+/* Testimonios */
+#testimonios div div {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#testimonios div .cards_testimonios {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 50px 0;
+}
+#testimonios div .cards_testimonios div {
+  padding: 40px 30px 20px 30px;
+  background-image: url(../images/fondo.png);
+  background-size: 300%;
+  border-radius: 20px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#testimonios div .cards_testimonios div .background-comillas {
+  position: absolute;
+  top: -55px;
+  left: 30px;
+  width: 25%;
+  z-index: 0;
+}
+#testimonios div .cards_testimonios div p {
+  font-size: 1.4rem;
+  z-index: 1;
+  margin: 0;
+}
+#testimonios div .cards_testimonios div .testimonios_nombre {
+  font-family: "corporative_bold";
+  text-align: right;
+}
+#testimonios div .cards_testimonios div:nth-child(2) {
+  margin: 20px 10px;
+}
+#testimonios div a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+}
+
+/* Precios */
+#precios {
+  display: flex;
+  width: 100%;
+}
+#precios .imagen_precio {
+  width: 30%;
+  height: 500px;
+  background-image: url(../images/ilustracion_clase2.jpg);
+  background-size: cover;
+}
+#precios .container_precios {
+  width: 70%;
+  background-image: url(../images/fondo.png);
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1045px) {
+  #principal .imagen_principal img {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 991px) {
   header nav div a {
     width: 30%;
@@ -329,6 +407,11 @@ header nav div div ul li a {
   }
   .home div div a button span {
     font-size: 1.5rem;
+  }
+  .secciones div, #sobrelasclases div, #testimonios div {
+    width: 90%;
+    margin: 0;
+    /* margin-top: 20px; */
   }
   #principal .imagen_principal img {
     width: 80%;
@@ -354,13 +437,31 @@ header nav div div ul li a {
   #principal .presentacion div a {
     font-size: 1rem;
   }
-  #sobrelasclases div div .video-container {
-    width: 90%;
-    padding-bottom: 50%;
+  #sobrelasclases div div {
+    margin: 10px 0;
+  }
+  #sobrelasclases div .cards_sobrelasclases {
+    flex-direction: column;
+  }
+  #sobrelasclases div .cards_sobrelasclases div {
+    width: 100%;
+    margin: 10px 0;
+  }
+  #sobrelasclases div .cards_sobrelasclases div .background-circles {
+    width: 13%;
+  }
+  #sobrelasclases div .cards_sobrelasclases div:nth-child(2) {
+    margin: 20px 0px;
+  }
+  #materias div .custom-list li:not(:last-child)::after {
+    height: 100px;
+  }
+  #testimonios div .cards_testimonios div .background-comillas {
+    top: -35px;
   }
 }
-@media screen and (max-width: 480px) {
-  .secciones div, #sobrelasclases div {
+@media screen and (max-width: 651px) {
+  .secciones div, #sobrelasclases div, #testimonios div {
     width: 90%;
     margin: 0;
     margin-top: 20px;
@@ -425,17 +526,26 @@ header nav div div ul li a {
   #sobrelasclases div .cards_sobrelasclases div {
     margin-bottom: 20px;
   }
+  #sobrelasclases div .cards_sobrelasclases div .background-circles {
+    width: 30%;
+  }
   #materias {
     flex-direction: column;
   }
   #materias div {
     padding: 40px;
   }
-  #materias div .custom-list li:not(:last-child)::after {
-    height: 90px; /* Ajusta la longitud de la línea */
-  }
   #materias .imagen_clases {
     height: 300px;
+  }
+  #testimonios div .cards_testimonios {
+    flex-direction: column;
+  }
+  #testimonios div .cards_testimonios div .background-comillas {
+    top: -55px;
+  }
+  #testimonios div .cards_testimonios div:nth-child(2) {
+    margin: 20px 0px;
   }
 }
 

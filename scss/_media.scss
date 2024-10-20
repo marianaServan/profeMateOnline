@@ -1,3 +1,13 @@
+@media screen and (max-width: 1045px) {
+    #principal {
+        .imagen_principal {
+            img {
+                width: 90%;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 991px) {
     header {
         nav{
@@ -28,7 +38,13 @@
             }
         }
     }
-    
+    .secciones {
+        div {
+            width: 90%;
+            margin: 0;
+            /* margin-top: 20px; */
+        }
+    }
     #principal {
         .imagen_principal {
             img {
@@ -65,16 +81,48 @@
     #sobrelasclases {
         div {
             div {
-                .video-container {
-                    width: 90%;
-                    padding-bottom: 50%;
+                margin: 10px 0;
+            }
+            .cards_sobrelasclases {
+                flex-direction: column;
+                div {
+                    width: 100%;
+                    margin: 10px 0;
+                    .background-circles {
+                        width: 13%;
+                    }
+                    &:nth-child(2) {
+                        margin: 20px 0px;
+                    }
                 }
             }
         }
-    }        
+    } 
+    #materias {
+        div {
+            .custom-list {
+                li {
+                    &:not(:last-child)::after {
+                        height: 100px;
+                    }
+                }
+            }
+        } 
+    }    
+    #testimonios {
+        div {
+            .cards_testimonios {
+                div {
+                    .background-comillas {
+                        top: -35px;
+                    }
+                }
+            }
+        }
+    } 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 651px) {
     .secciones {
         div {
             width: 90%;
@@ -149,6 +197,9 @@
                 flex-direction: column; 
                 div {
                     margin-bottom: 20px;
+                    .background-circles {
+                        width: 30%;
+                    }
                 }
             }
         }
@@ -157,16 +208,24 @@
         flex-direction: column;
         div {
             padding: 40px;
-            .custom-list {
-                li {
-                    &:not(:last-child)::after {
-                        height: 90px; /* Ajusta la longitud de la línea */
-                    }
-                }
-            }
         }
         .imagen_clases {
             height: 300px;
         }
     }
+    #testimonios {
+        div {
+            .cards_testimonios {
+                flex-direction: column;
+                div { 
+                    .background-comillas {
+                        top: -55px;
+                    }                   
+                    &:nth-child(2) {
+                        margin: 20px 0px;
+                    }
+                }
+            }
+        }
+    }  
 }

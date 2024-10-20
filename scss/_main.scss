@@ -68,7 +68,7 @@
     div {
         div {
             width: 100%;
-            margin: 20px;
+            margin: 20px 0;
             display: flex;
             justify-content: center;
             position: relative;
@@ -90,6 +90,7 @@
         .cards_sobrelasclases {
             display: flex;
             justify-content: space-between;
+            width: 100%;
             div {
                 padding: 40px;
                 background-image: url(../images/fondo.png);
@@ -116,9 +117,14 @@
                     color: $tertiary_color;
                     border-width: 1px;
                     opacity: 1;
+                    z-index: 1;
                 }          
                 p {
                     font-size: 1.4rem;
+                    z-index: 1;
+                }
+                &:nth-child(2) {
+                    margin: 20px 10px;
                 }
                 @extend .hover;
             }
@@ -183,4 +189,79 @@
         background-image: url(../images/ilustracion_clase1.jpg);
         background-size: cover;
     }
+}
+
+/* Testimonios */
+
+#testimonios {
+    @extend .secciones;
+    div {
+        div {
+            width: 100%;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            position: relative;       
+        }
+        .cards_testimonios {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 50px 0;
+            div {
+                padding: 40px 30px 20px 30px;
+                background-image: url(../images/fondo.png);
+                background-size: 300%;
+                border-radius: 20px ;
+                color: $secondary_color;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                .background-comillas {
+                    position: absolute;
+                    top: -55px;
+                    left: 30px;
+                    width: 25%;
+                    z-index: 0; 
+                } 
+                p {
+                    font-size: 1.4rem;
+                    z-index: 1;
+                    margin: 0;
+                }
+                .testimonios_nombre {
+                    font-family: $secondary_font;
+                    text-align: right;
+                }
+                &:nth-child(2) {
+                    margin: 20px 10px;
+                }
+                @extend .hover;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $secondary_color;
+            font-size: 1.3rem;
+        }
+    }    
+}
+
+/* Precios */
+
+#precios{
+    display: flex;
+    width: 100%;
+   .imagen_precio {
+        width: 30%;
+        height: 500px;
+        background-image: url(../images/ilustracion_clase2.jpg);
+        background-size: cover;
+   }
+   .container_precios {
+        width: 70%;
+        background-image: url(../images/fondo.png);
+        background-size: cover;
+        color: $secondary_color;
+   }
 }
