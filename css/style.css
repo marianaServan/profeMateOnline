@@ -318,6 +318,7 @@ header nav div div ul li a {
   width: 100%;
   background-image: url(../images/ilustracion_clase1.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 /* Testimonios */
@@ -376,15 +377,78 @@ header nav div div ul li a {
 }
 #precios .imagen_precio {
   width: 30%;
-  height: 500px;
   background-image: url(../images/ilustracion_clase2.jpg);
   background-size: cover;
+  background-position: center;
 }
 #precios .container_precios {
   width: 70%;
   background-image: url(../images/fondo.png);
   background-size: cover;
   color: #FFFFFF;
+  padding: 70px;
+}
+#precios .container_precios h3 {
+  font-size: 2.5rem;
+  font-family: "corporative_bold";
+  color: #FFFFFF;
+}
+#precios .container_precios .cards_precios {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+#precios .container_precios .cards_precios div {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  color: #000000;
+  padding: 20px;
+  position: relative;
+  width: 30%;
+  text-align: center;
+}
+#precios .container_precios .cards_precios div .background-peso {
+  position: absolute;
+  top: -30px;
+  left: 5px;
+  width: 25%;
+  z-index: 0;
+}
+#precios .container_precios .cards_precios div h4 {
+  font-family: "corporative_bold";
+  text-align: center;
+  z-index: 1;
+}
+#precios .container_precios .cards_precios div hr {
+  color: #A405A7;
+  border-width: 1px;
+  opacity: 1;
+  z-index: 1;
+}
+#precios .container_precios .cards_precios div div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+#precios .container_precios .cards_precios div div p {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0;
+}
+#precios .container_precios .cards_precios div div p:last-child {
+  font-family: "corporative_bold";
+}
+#precios .container_precios .cards_precios .paquetes p {
+  font-size: 1.4rem;
+}
+#precios .container_precios .cards_precios .paquetes p:last-child {
+  font-family: "corporative_bold";
+  margin: 0;
+}
+#precios .container_precios p {
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 1045px) {
@@ -458,6 +522,24 @@ header nav div div ul li a {
   }
   #testimonios div .cards_testimonios div .background-comillas {
     top: -35px;
+  }
+  #precios .imagen_precio {
+    width: 40%;
+    background-size: cover;
+  }
+  #precios .container_precios {
+    width: 60%;
+    padding: 50px;
+  }
+  #precios .container_precios .cards_precios {
+    flex-direction: column;
+  }
+  #precios .container_precios .cards_precios div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #precios .container_precios .cards_precios div .background-peso {
+    width: 20%;
   }
 }
 @media screen and (max-width: 651px) {
@@ -546,6 +628,20 @@ header nav div div ul li a {
   }
   #testimonios div .cards_testimonios div:nth-child(2) {
     margin: 20px 0px;
+  }
+  #precios {
+    flex-direction: column;
+  }
+  #precios .imagen_precio {
+    width: 100%;
+    height: 300px;
+  }
+  #precios .container_precios {
+    width: 100%;
+    padding: 20px;
+  }
+  #precios .container_precios .cards_precios div {
+    margin-bottom: 20px;
   }
 }
 
