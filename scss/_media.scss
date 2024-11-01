@@ -10,6 +10,7 @@
 
 @media screen and (max-width: 991px) {
     header {
+        height: fit-content;
         nav{
             div{
                 a {
@@ -140,6 +141,15 @@
             }
         }
     }
+    #contacto {
+        div {
+            div {
+                .botones {
+                    width: 50%; 
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 651px) {
@@ -262,6 +272,18 @@
                     margin-bottom: 20px;
                 }
             }
+        }
+    }
+    #contacto {
+        div {
+            div {
+                .botones {
+                    width: 80%; 
+                }
+            }
+        }
+        .irarriba {
+            width: 20%;
         }
     }
 }

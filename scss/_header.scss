@@ -1,4 +1,8 @@
 header {
+    position: fixed;
+    height: fit-content;
+    top: 0px; 
+    z-index: 100;
     background-image: url(../images/fondo.png);
     background-size: cover;
     nav {
@@ -46,10 +50,13 @@ header {
 }
 
 .line_header {
+    /* position: fixed;
+    top: 120px; */
     color: $tertiary_color;
     width: 100%;
     border-width: 5px;
     opacity: 1;
     margin: 0;
     padding: 0;
+    z-index: 1000;
 }

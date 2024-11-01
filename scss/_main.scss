@@ -1,6 +1,7 @@
 /* Principal */
 
 #principal {
+    padding-top: 120px;
     background-image: url(../images/fondo.png);
     background-size: cover;
     display: flex;
@@ -64,6 +65,7 @@
 /* Sobre las clases */
 
 #sobrelasclases {
+    padding-top: 120px;
     @extend .secciones;
     div {
         div {
@@ -133,6 +135,7 @@
 }
 
 #materias {
+    padding-top: 120px;
     display: flex;
     width: 100%;
     div {
@@ -195,6 +198,7 @@
 /* Testimonios */
 
 #testimonios {
+    padding-top: 120px;
     @extend .secciones;
     div {
         div {
@@ -251,6 +255,7 @@
 /* Precios */
 
 #precios{
+    padding-top: 120px;
     display: flex;
     width: 100%;
    .imagen_precio {
@@ -331,4 +336,78 @@
             font-size: 1.4rem;
         }
    }
+}
+
+/* Contacto */
+
+#contacto {
+    padding-top: 120px;
+    @extend .secciones;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+        .card_contacto {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 50px 0;
+            padding: 40px;
+            background-image: url(../images/fondo.png);
+            background-size: 100%;
+            border-radius: 20px ;
+            color: $secondary_color;
+            p {
+                font-size: 1.4rem;
+                margin-bottom: 50px;
+                span {
+                    font-family: $secondary_font;
+                    text-decoration: underline $tertiary_color;
+                }
+            }   
+            a {
+                text-decoration: none;
+                color: $secondary_color;
+                font-size: 1.3rem;
+                width: 30%;
+            }
+        }
+    }    
+    hr {
+        color: $tertiary_color;
+        width: 100%;
+        border-width: 5px;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+    }
+    .irarriba {
+        text-decoration: none;
+        color: $secondary_color;
+        font-size: 1.3rem;
+        width: 5%;
+        svg {
+            width: 30px;
+        }
+        position: relative;
+        top: -25px;
+    }
+}
+
+
+/* Whatsapp */
+
+.whatsapp-logo {
+    position: fixed;
+    bottom: 20px; /* Ajusta según el espacio que quieras desde el borde inferior */
+    right: 20px; /* Ajusta según el espacio que quieras desde el borde derecho */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    cursor: pointer;
+    @extend .hover;
+    img {
+        width: 100px;
+        height: 100px;
+    }
 }
