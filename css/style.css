@@ -15,7 +15,7 @@
 }
 
 /* Básicos */
-.hover:hover, .whatsapp-logo:hover, #testimonios div .cards_testimonios div:hover, #sobrelasclases div .cards_sobrelasclases div:hover, header nav div div ul li a:hover, header nav div a img:hover, .botones:hover, .home div div a button:hover {
+.hover:hover, .whatsapp-logo:hover, footer .cards_redes a:hover, #testimonios div .cards_testimonios div:hover, #sobrelasclases div .cards_sobrelasclases div:hover, header nav div div ul li a:hover, header nav div a img:hover, .botones:hover, .home div div a button:hover {
   filter: brightness(0.85);
   transform: scale(1.015);
 }
@@ -31,19 +31,19 @@
   text-decoration: none;
 }
 
-.secciones, #contacto, #testimonios, #sobrelasclases {
+.secciones, footer, #contacto, #testimonios, #sobrelasclases {
   display: flex;
   justify-content: center;
 }
-.secciones div, #contacto div, #testimonios div, #sobrelasclases div {
+.secciones div, footer div, #contacto div, #testimonios div, #sobrelasclases div {
   /* margin: 20px; */
   width: 80%;
 }
-.secciones div h3, #contacto div h3, #testimonios div h3, #sobrelasclases div h3 {
+.secciones div h3, footer div h3, #contacto div h3, #testimonios div h3, #sobrelasclases div h3 {
   font-size: 2.5rem;
   font-family: "corporative_bold";
 }
-.secciones div h3 span, #contacto div h3 span, #testimonios div h3 span, #sobrelasclases div h3 span {
+.secciones div h3 span, footer div h3 span, #contacto div h3 span, #testimonios div h3 span, #sobrelasclases div h3 span {
   font-size: 1.5rem;
   font-family: "corporative_bold";
 }
@@ -521,6 +521,40 @@ header nav div div ul li a {
   width: 30px;
 }
 
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer .cards_redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+footer .cards_redes a {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-image: url(../images/fondo.png);
+  background-size: 200%;
+  border-radius: 20px;
+  color: #FFFFFF;
+  padding: 20px;
+}
+footer .cards_redes a div div h4 {
+  font-weight: 200;
+  font-size: 2rem;
+  font-family: "corporative_bold";
+}
+footer .cards_redes a div svg {
+  width: 50px;
+  color: #A405A7;
+  margin-bottom: 20px;
+}
+
 /* Whatsapp */
 .whatsapp-logo {
   position: fixed;
@@ -558,7 +592,7 @@ header nav div div ul li a {
   .home div div a button span {
     font-size: 1.5rem;
   }
-  .secciones div, #sobrelasclases div, #testimonios div, #contacto div {
+  .secciones div, #sobrelasclases div, #testimonios div, #contacto div, footer div {
     width: 90%;
     margin: 0;
     /* margin-top: 20px; */
@@ -632,7 +666,7 @@ header nav div div ul li a {
   }
 }
 @media screen and (max-width: 651px) {
-  .secciones div, #sobrelasclases div, #testimonios div, #contacto div {
+  .secciones div, #sobrelasclases div, #testimonios div, #contacto div, footer div {
     width: 90%;
     margin: 0;
     margin-top: 20px;
@@ -737,6 +771,29 @@ header nav div div ul li a {
   }
   #contacto .irarriba {
     width: 20%;
+  }
+  footer {
+    margin-bottom: 30px;
+  }
+  footer .cards_redes {
+    flex-direction: column;
+  }
+  footer .cards_redes a {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  footer .cards_redes a div {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .cards_redes a div div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .cards_redes a div div p {
+    font-size: 1.4rem;
   }
 }
 

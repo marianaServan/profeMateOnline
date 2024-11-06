@@ -286,4 +286,27 @@
             width: 20%;
         }
     }
+    footer {
+        .cards_redes {
+            flex-direction: column;
+            a {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 10px;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    div {
+                        width: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        p {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+        margin-bottom: 30px;
+    }
 }
